@@ -15,7 +15,7 @@ const TabLayout = () => {
                 options={{
                     title: "Home",
                     tabBarIcon: ({ color }) => (
-                        <FontAwesome name="home" size={24} color={color} />
+                        <FontAwesome name="home" size={26} color={color} />
                     )
                 }}
             />
@@ -36,7 +36,7 @@ const TabLayout = () => {
                 options={{
                     title: "Add",
                     tabBarIcon: ({color}) => (
-                        <AntDesign name="plus" size={24} color={color} />
+                        <AntDesign name="plus-circle" size={25} color={color} />
                     ),  
                 }}
             />
@@ -56,7 +56,7 @@ const TabLayout = () => {
                 options={{
                     title: "Profile",
                     tabBarIcon: ({ color }) => (
-                        <FontAwesome5 name="user" size={24} color={color} />
+                        <FontAwesome5 name="user" size={25} color={color} />
                     )
                 }}
             />

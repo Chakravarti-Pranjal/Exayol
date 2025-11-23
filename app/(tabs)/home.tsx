@@ -6,10 +6,10 @@ import { FlatList, Text, TextInput, TouchableOpacity, View } from "react-native"
 const categories = [
   { id: "1", title: "Notes", count: "120 Notes", icon: "document-text-outline" },
   { id: "2", title: "Question Papers", count: "85 files", icon: "help-circle-outline" },
-  { id: "3", title: "Study Material", count: "210 files", icon: "briefcase-outline" },
+  // { id: "3", title: "Study Material", count: "210 files", icon: "briefcase-outline" },
   { id: "4", title: "PDFs", count: "300 files", icon: "document-outline" },
   { id: "5", title: "Books", count: "40 books", icon: "book-outline" },
-  { id: "6", title: "Community", count: "12 groups", icon: "people-outline" },
+  // { id: "6", title: "Community", count: "12 groups", icon: "people-outline" },
 ];
 
 const latestNotes = [

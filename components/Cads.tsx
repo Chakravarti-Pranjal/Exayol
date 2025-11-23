@@ -1,5 +1,6 @@
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import { router } from "expo-router";
 import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 
@@ -52,6 +53,7 @@ export const TrendingCard = () => {
 ----------------------------------------------*/
 
 export type LatestType = {
+  id: string,
   subject: string;
   title: string;
   author: string;
@@ -61,7 +63,14 @@ export type LatestType = {
 
 export const LatestCard = ({ item }: { item: LatestType }) => {
   return (
-    <TouchableOpacity className="p-3 rounded-xl border border-gray-200 mb-3">
+    <TouchableOpacity className="p-3 rounded-xl border border-gray-200 mb-3" 
+      onPress={() =>
+  router.push({
+    pathname: "/[id]",
+    params: { id: item.id },
+  })
+}
+    >
 
       <Text className="text-blue-600 text-sm font-semibold">{item.subject}</Text>
 
