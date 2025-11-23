@@ -62,7 +62,7 @@ export default function CustomTabBar({
               {options.tabBarIcon &&
                 options.tabBarIcon({
                   focused: isFocused,
-                  color: isFocused ? "#4CAF50" : "#8a9aad",
+                  color: isFocused ? "#2196F3" : "#7f8ca7",
                   size: 26,
                 })}
             </TouchableOpacity>
@@ -74,7 +74,7 @@ export default function CustomTabBar({
           <View className="bg-white w-20 h-20 rounded-full items-center justify-center shadow-xl">
             <TouchableOpacity
               onPress={() => navigation.navigate("add")}
-              className="bg-[#4CAF50] w-16 h-16 rounded-full items-center justify-center shadow-xl"
+              className="bg-blue-500 w-16 h-16 rounded-full items-center justify-center shadow-xl"
             >
               <Feather name="plus" size={34} color="white" />
             </TouchableOpacity>

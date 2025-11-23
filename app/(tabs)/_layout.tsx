@@ -1,15 +1,13 @@
-import CustomTabBar from '@/components/CustomTabBar';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { Tabs } from 'expo-router';
 
-import Fontisto from '@expo/vector-icons/Fontisto';
 
 const TabLayout = () => {
     return (
         <Tabs
-            tabBar={(props) => <CustomTabBar {...props} />}   
+            // tabBar={(props) => <CustomTabBar {...props} />}   
             screenOptions={{ headerShown: false }}            
         >
             <Tabs.Screen 
@@ -22,7 +20,7 @@ const TabLayout = () => {
                 }}
             />
 
-            <Tabs.Screen 
+            {/*<Tabs.Screen 
                 name='explore'
                 options={{
                     title: "Explore",
@@ -30,7 +28,7 @@ const TabLayout = () => {
                         <Fontisto name="search" size={24} color={color} />
                     )
                 }}
-            />
+            />*/}
 
             {/* Middle floating tab must be included */}
             <Tabs.Screen
@@ -43,7 +41,7 @@ const TabLayout = () => {
                 }}
             />
 
-            <Tabs.Screen 
+            {/*<Tabs.Screen 
                 name='activity'
                 options={{
                     title: "Activity",
@@ -51,7 +49,7 @@ const TabLayout = () => {
                         <Fontisto name="bell" size={24} color={color} />
                     )
                 }}
-            />
+            />*/}
 
             <Tabs.Screen 
                 name='profile'
