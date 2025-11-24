@@ -1,14 +1,15 @@
 import { CategoryCard, LatestCard, TrendingCard } from "@/components/Cads";
 import { Ionicons } from "@expo/vector-icons";
+import { router } from "expo-router";
 import React from "react";
 import { FlatList, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 const categories = [
-  { id: "1", title: "Notes", count: "120 Notes", icon: "document-text-outline" },
-  { id: "2", title: "Question Papers", count: "85 files", icon: "help-circle-outline" },
-  // { id: "3", title: "Study Material", count: "210 files", icon: "briefcase-outline" },
-  { id: "4", title: "PDFs", count: "300 files", icon: "document-outline" },
-  { id: "5", title: "Books", count: "40 books", icon: "book-outline" },
+  { id: "1", title: "Notes", count: "120 Notes", icon: "document-text-outline", route: "/notes" },
+  { id: "2", title: "Question Papers", count: "85 files", icon: "help-circle-outline", route: "/papers" },
+  { id: "3", title: "PDFs", count: "300 files", icon: "document-outline", route: "/pdfs" },
+  { id: "4", title: "Books", count: "40 books", icon: "book-outline", route: "/books" },
+  // { id: "5", title: "Study Material", count: "210 files", icon: "briefcase-outline" },
   // { id: "6", title: "Community", count: "12 groups", icon: "people-outline" },
 ];
 
@@ -37,6 +38,30 @@ const latestNotes = [
     views: "2.5k",
     likes: "1.8k",
   },
+  {
+    id: "4",
+    subject: "Biology 101",
+    title: "Cellular Respiration Explained",
+    author: "Sarah L.",
+    views: "1.2k",
+    likes: "890",
+  },
+  {
+    id: "5",
+    subject: "History of Art",
+    title: "Renaissance Art Movements",
+    author: "Mike E.",
+    views: "950",
+    likes: "650",
+  },
+  {
+    id: "6",
+    subject: "Calculus I",
+    title: "Integration Techniques Guide",
+    author: "Emily C.",
+    views: "2.5k",
+    likes: "1.8k",
+  },
 ];
 
 export default function Home() {
@@ -55,7 +80,9 @@ export default function Home() {
           {/* Header */}
           <View className="flex-row items-center justify-between mb-3">
             <Text className="text-xl font-semibold">Hi, Alex!</Text>
-            <TouchableOpacity className="w-10 h-10 rounded-full bg-orange-300" />
+            <TouchableOpacity onPress={() => router.push('/notifications')} className="p-1">
+                            <Ionicons name="notifications-outline" size={22} color="#333" />
+                          </TouchableOpacity>
           </View>
 
           {/* Search Bar */}
@@ -77,7 +104,7 @@ export default function Home() {
 
           {/* Latest Notes Header */}
           <View className="flex-row justify-between items-center mt-5 mb-3">
-            <Text className="text-lg font-semibold">Latest Notes</Text>
+            <Text className="text-2xl font-bold">Latest Notes</Text>
             <TouchableOpacity>
               <Text className="text-blue-600 font-medium">See All</Text>
             </TouchableOpacity>
