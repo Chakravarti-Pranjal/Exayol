@@ -60,6 +60,7 @@ const Login: React.FC = () => {
 
       <InputField
         placeholder="Enter your password"
+        name="password"
         iconName="lock-closed-outline"
         secureTextEntry
         value={form.password}

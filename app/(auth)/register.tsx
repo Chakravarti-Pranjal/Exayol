@@ -70,6 +70,7 @@ const Register: React.FC = () => {
 
       <InputField
         placeholder="Enter your password"
+        name="password"
         iconName="lock-closed-outline"
         secureTextEntry
         value={form.password}
@@ -78,6 +79,7 @@ const Register: React.FC = () => {
 
       <InputField
         placeholder="Confirm your password"
+        name="password"
         iconName="lock-closed-outline"
         secureTextEntry
         value={form.confirmPassword}
