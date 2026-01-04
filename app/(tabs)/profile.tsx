@@ -84,7 +84,7 @@ const ProfileScreen: React.FC = () => {
       <View className="px-6 py-4 bg-white border-t border-gray-200">
         <TouchableOpacity
           onPress={handleLogout}
-          className="bg-red-500 py-3 rounded-xl items-center"
+          className="bg-red-500 py-3 rounded-full items-center"
         >
           <Text className="text-white font-semibold text-lg">Logout</Text>
         </TouchableOpacity>
